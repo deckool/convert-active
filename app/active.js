@@ -23,12 +23,10 @@ function getActiveCurrenciesFromXML(file) {
 		success : function(data) {
 
 			$(data).find('Active').each(function() {
-				var sym = $(this).attr('currency');
-				currencies.push (sym);
+				currencies.push ($(this).attr('currency'));
 			});
 		}
 	});
 
-      console.log(currencies);
 return currencies;
 }

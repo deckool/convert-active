@@ -40,7 +40,7 @@ console.log(active);
 				var sym = $(this).attr('currency');
 				var rate = $(this).text();
 				currencies[sym] = rate * 1;
-                                if($.inArray(sym, active) !== -1){
+                                if($.inArray(sym, active) !== -1 || active.length === 0){
 					$('#valuta1').append($("<option></option>").attr("value", sym).text(sym));
 					$('#valuta2').append($("<option></option>").attr("value", sym).text(sym));
                            	}
